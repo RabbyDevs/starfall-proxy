@@ -9,7 +9,6 @@ const axios = require('axios');
 const { EmbedBuilder, WebhookClient } = require('discord.js');
 
 app.post('/webhook', async(request, response) => {
-    console.log(request.body)
     const id = request.query.id
     const token = request.query.auth
     const webhookClient = new WebhookClient({ id: id, token: token });
@@ -17,6 +16,7 @@ app.post('/webhook', async(request, response) => {
         content: request.body.content,
         embeds: request.body.embeds
     })
+    response.send('OK')
 })
 
 app.listen(PORT, () => {
