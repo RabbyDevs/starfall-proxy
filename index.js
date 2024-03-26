@@ -13,10 +13,9 @@ app.post('/webhook', async(request, response) => {
     const id = request.query.id
     const token = request.query.auth
     const webhookClient = new WebhookClient({ id: id, token: token });
-    const decryptedBody = JSON.parse(request.body)
     webhookClient.send({
-        content: decryptedBody.content,
-        embeds: decryptedBody.embeds
+        content: request.body[0].content,
+        embeds: request.body[0].embeds
     })
 })
 
