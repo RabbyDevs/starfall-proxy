@@ -1,0 +1,16 @@
+{
+  "name": "starfall-proxy",
+  "version": "1.0.0",
+  "description": "proxy :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rabby",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "discord.js": "^14.14.1",
+    "express": "^4.19.1"
+  }
+}
